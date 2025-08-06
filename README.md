@@ -1,18 +1,18 @@
-🧱 Python Decorator Example
+# 🧱 Python Decorator Example
 
-This simple Python script demonstrates how function decorators work in Python by using a hello_decorator that modifies another function to execute twice.
-🚀 Overview
+This simple Python script demonstrates how **function decorators** work in Python by using a `hello_decorator` that modifies another function to execute twice.
+
+## 🚀 Overview
 
 In this program:
 
-    A decorator function named hello_decorator is defined.
+- A decorator function named `hello_decorator` is defined.
+- It takes a function as input, wraps it inside another function (`wrapper`), and returns the new behavior.
+- The wrapped function (`function_hello`) is then called — but instead of printing "Hello" once, it prints it **twice**, thanks to the decorator.
 
-    It takes a function as input, wraps it inside another function (wrapper), and returns the new behavior.
+## 📜 Code Example
 
-    The wrapped function (function_hello) is then called — but instead of printing "Hello" once, it prints it twice, thanks to the decorator.
-
-📜 Code Example
-
+```python
 def hello_decorator(func):
     def wrapper():
         for _ in range(2):
@@ -25,34 +25,33 @@ def function_hello():
 function_being_used = hello_decorator(function_hello)
 
 function_being_used()
+```
 
-🧠 Output:
+### 🧠 Output:
 
+```
 Hello
 Hello
+```
 
-📌 Key Concepts
+## 📌 Key Concepts
 
-    Decorator: A function that takes another function as an argument and extends or alters its behavior.
+- **Decorator**: A function that takes another function as an argument and extends or alters its behavior.
+- **Higher-order function**: A function that takes another function as input or returns one.
+- **Wrapper function**: The inner function that defines the new behavior before calling the original function.
 
-    Higher-order function: A function that takes another function as input or returns one.
+## 🛠️ How to Run
 
-    Wrapper function: The inner function that defines the new behavior before calling the original function.
+1. Save the script in a `.py` file, for example `decorator_example.py`
+2. Run it with Python:
 
-🛠️ How to Run
-
-    Save the script in a .py file, for example decorator_example.py
-
-    Run it with Python:
-
+```bash
 python decorator_example.py
+```
 
-🔄 Next Steps
+## 🔄 Next Steps
 
 You can expand this by:
-
-    Using the @ syntax for decorators
-
-    Adding arguments to the decorated function
-
-    Creating reusable decorators for logging, timing, access control, etc.
+- Using the `@` syntax for decorators
+- Adding arguments to the decorated function
+- Creating reusable decorators for logging, timing, access control, etc.
